@@ -25,6 +25,9 @@ while($row = $imageresult->fetch_assoc()) {
 <form method="POST" action="index.php">
 	<input type="submit" name="submit" value="Go back">
 </form>
+<form method="POST" action="addPhoto.php">
+	<input type="submit" name="submit" value="Add more photos">
+</form>
 </body>
 </html>
 
