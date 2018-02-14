@@ -2,15 +2,19 @@
 
 if(isset($_POST["submit"])) {
 	$conn = mysqli_connect("localhost", "root", "", "DatabaseExam");
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$sql = "SELECT id FROM adminuser WHERE username = '$username' AND password = '$password'";
-	$result = $conn->query($sql);
-	if($result->num_rows > 0) {
-		header("Location: userlist.php");
-		exit;
-	} else {
-		echo "<p style='color:red'>Wrong Username/Password</p>";
+	$username = mysqli_real_escape_string($conn, $_POST["username"]);
+	$password = mysqli_real_escape_string($conn, $_POST["password"]);
+	$hashPass = password_hash($password, PASSWORD_DEFAULT);
+	if (password_verify($password, $hashPass)){
+		$sql = "SELECT id FROM adminusers WHERE username = '$username'";
+		echo $sql;
+		$result = $conn->query($sql);
+		if($result->num_rows > 0) {
+			header("Location: userlist.php");
+			exit;
+		} else {
+			echo "<p style='color:red'>Wrong Username/Password</p>";
+		}
 	}
 }
 ?>
