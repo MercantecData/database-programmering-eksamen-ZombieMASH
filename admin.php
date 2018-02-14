@@ -7,7 +7,6 @@ if(isset($_POST["submit"])) {
 	$hashPass = password_hash($password, PASSWORD_DEFAULT);
 	if (password_verify($password, $hashPass)){
 		$sql = "SELECT id FROM adminusers WHERE username = '$username'";
-		echo $sql;
 		$result = $conn->query($sql);
 		if($result->num_rows > 0) {
 			header("Location: userlist.php");
