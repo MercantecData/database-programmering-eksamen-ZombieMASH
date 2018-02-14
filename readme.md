@@ -23,3 +23,6 @@ Hvad jeg har added ekstra:
 
 - Muligheden for at brugen kan sætte flere billeder ind.
 - Gjort så Admin login kun kan ses når man IKKE er logget ind med en bruger (Som ikke der er meget grund til at brugen skulle kunne logge på admin imens han selv er logget ind.)
+
+
+Lavet af: Richard Brown Thomsen.
