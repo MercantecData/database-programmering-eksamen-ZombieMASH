@@ -96,7 +96,7 @@ if($loggedIn) {
 			<?php 
 			if ($loggedIn){
 				if ($imageresult) {
-					echo "<h2>Dine Billeder</h2>";
+					echo "<a href='editPhoto.php'><h2>Dine Billeder</h2></a>";
 					while($row = $imageresult->fetch_assoc()) {
 						$url = $row["imageURL"];
 						echo "<a href='fullSize.php/?q=" . $url . "'>

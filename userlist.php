@@ -20,12 +20,9 @@
 		echo "<br>";
 	}
 	?>
-<br><br><br><br>	
+<br><br><br><br>
 <form method="POST" action="logout.php">
 	<input type="submit" name="submit" value="logout">
 </form>
 </body>
 </html>
-
-
-<!-- sha512 -->
