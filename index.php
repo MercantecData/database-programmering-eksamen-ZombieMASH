@@ -99,7 +99,8 @@ if($loggedIn) {
 					echo "<h2>Dine Billeder</h2>";
 					while($row = $imageresult->fetch_assoc()) {
 						$url = $row["imageURL"];
-						echo "<img class = 'myImage' src='$url'>";
+						echo "<a href='fullSize.php/?q=" . $url . "'>
+						<img class = 'myImage' src='$url'></a>";
 					}
 				} 
 			}
@@ -126,3 +127,10 @@ if($loggedIn) {
 
 </body>
 </html>
+
+
+<script type="text/javascript">
+	function fullsize(){
+		console.log("hej");
+	}
+</script>
