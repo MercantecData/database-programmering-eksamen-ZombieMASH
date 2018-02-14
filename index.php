@@ -80,17 +80,17 @@ if($loggedIn) {
 			<form method="POST" action="login.php">
 				Brugernavn <input type="text" name="username">
 				Password<input type="password" name="password">
-				<input type="submit" name="submit" value="login">
+				<input type="submit" name="submit" value="Login">
 			</form>
 			<?php } else {?>
-			<form method="POST" action="logout.php">
+			<form method="POST" action="Logout.php">
 				<input type="submit" name="submit" value="logout">
 			</form>
 			<?php } ?>
 		</div>
 
 		<div class="content">
-			<h1>Velkommen Til!</h1>
+			<h1>Velkommen til det nye MercBook</h1>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat quis purus ut bibendum. Mauris sit amet lacinia arcu. Vivamus fringilla magna id augue luctus interdum. 
 
 			<?php 
@@ -122,8 +122,9 @@ if($loggedIn) {
 			</div>
 		</div>
 	</div>
-
+	<?php if(!$loggedIn){?>
 	<a href="admin.php">Admin Login</a>
+	<?php } ?>
 
 </body>
 </html>
